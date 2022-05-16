@@ -1,11 +1,23 @@
-import type { Component } from "solid-js";
+import { Component, lazy } from "solid-js";
+import { Routes, Route, Navigate } from "solid-app-router";
 
-import logo from "./assets/logo.svg";
+import { detailsData } from "./pages/details.data";
+import DetailsPage from "./pages/details.page";
+import SearchPage from "./pages/search.page";
+import { Heading } from "./components/Heading";
 
 const App: Component = () => {
   return (
-    <div class="flex h-screen w-screen justify-center bg-slate-600">
-      <img src={logo} alt="logo" class="w-[300px]" />
+    <div class="m-0 h-screen w-screen p-0">
+      <Heading />
+      <Routes>
+        <Route path="/" component={SearchPage} />
+        <Route
+          path="/pokemon/:name"
+          component={DetailsPage}
+          data={detailsData}
+        />
+      </Routes>
     </div>
   );
 };

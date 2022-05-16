@@ -4,7 +4,14 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'pokemon-solid': ['PokemonSolid'],
+        'pokemon-hollow': ['PokemonHollow'],
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-text-fill-stroke')(),
+  ],
 }

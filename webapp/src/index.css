@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: PokemonHollow;
+  src: url('./assets/fonts/PokemonHollow.woff2') format('woff2'),
+       url('./assets/fonts/PokemonHollow.woff') format('woff');
+}
+
+@font-face {
+  font-family: PokemonSolid;
+  src: url('./assets/fonts/PokemonSolid.woff2') format('woff2'),
+       url('./assets/fonts/PokemonSolid.woff') format('woff');
+}
